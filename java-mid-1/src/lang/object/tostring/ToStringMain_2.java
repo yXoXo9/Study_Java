@@ -26,6 +26,5 @@ public class ToStringMain_2 {
         System.out.println("참조 값 : " + System.identityHashCode(dog2));
         System.out.println("16진수로 처리 " + Integer.toHexString(System.identityHashCode(dog2)));
 
-
     }
 }
