@@ -1,2 +1,7 @@
-/studyProjects.iml
-/.idea/
+### dir ###
+*out/
+*.idea/
+*tmp*/
+
+### file ###
+*.iml
