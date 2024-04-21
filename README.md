@@ -1,7 +1,7 @@
 ## Study_Java - 2024.03.02 ~
 
 ---
-### DevOps
+### Configureation
 1. Java "21.0.2" (2024-01-16)
 2. Git "2.39.1"
 3. IntelliJ IDEA 2023.3.4 (Community Edition)
