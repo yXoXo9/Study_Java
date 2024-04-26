@@ -22,10 +22,10 @@ public class ObjectPolyExample_1 {
         // obj.move(); 컴파일 오류 발생
 
         // => 객체에 맞는 다운 캐스팅 필요
-        if(obj instanceof Dog getDog){
-            getDog.sound();
-        }else if(obj instanceof Car getCar){
-            getCar.move();
+        if(obj instanceof Dog){
+            ((Dog) obj).sound();
+        }else if(obj instanceof Car){
+            ((Car) obj).move();
         }
     }
 }
