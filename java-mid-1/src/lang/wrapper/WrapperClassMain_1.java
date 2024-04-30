@@ -32,5 +32,19 @@ public class WrapperClassMain_1 {
         System.out.println("비교 = ");
         System.out.println(" == : " + (i == getIntValue));
         System.out.println(" equals : " + (i.equals(getIntValue)));
+
+        /* 기본형을 래퍼 클래스로 변하는 것을 마치 박스에 무언가(기본형)을 넣는 것 같다 하여
+        * 래퍼 클래스 생성 -> 박싱(Boxing) 이라고 한다.
+        * new Integer 를 직접 사용하지 말고,
+        * Integer.valueOf(10)을 사용하자
+        * Integer 래퍼 클래스의 메서드에는 성능 최적화 기능이 적용되어 있으므로
+        * 쉽고 간편하게 사용할 수 있다.
+        * => -128 ~ 127 범위의 Integer 클래스를 미리 생성해둔 후, 호출 시 미리 사용된 클래스를 사용한다.
+        * (범위를 벗어날 경우 자바에서 new Integer 클래스를 생성해서 사용한다.)
+        * */
+
+        /* 박싱 <> 언박싱 (intValue())
+        * 래퍼 클래스에 있는 기본형 값을 다시 추출한다.
+        * */
     }
 }
