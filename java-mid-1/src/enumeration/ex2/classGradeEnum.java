@@ -15,7 +15,7 @@ public class classGradeEnum {
     * */
 
     /*
-    * private 생성자를 통해 외부에서 이 클래스를 생성할 ㅜㅅ 없게 만든다.
+    * private 생성자를 통해 외부에서 이 클래스를 생성할 수 없게 만든다.
     * */
     private classGradeEnum() {}
 }
