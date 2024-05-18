@@ -2,29 +2,12 @@ package nested.local;
 
 import java.lang.reflect.Field;
 
-public class LocalOuterV3_4 {
+public class LocalOuterV4_5 {
     private int outInstanceVar = 3;
 
-    /*
-    * 생명주기
-    * */
     public Printer process(int paramVar){
-    // public Printer process(final int paramVar){ 과 동일
 
-        // 지역 변수(localVar)는 스택 프레임이 종료되는 순간 함께 제거됨
         int localVar = 1;
-        /* final int localVar = 1; 과 동일
-            Variable 'localVar' is accessed from within inner class, needs to be final or effectively final
-            localVar = 3;
-        * 지역 클래스 (여기선 LocalPrinter) 가 접근하는 지역 변수(여기선 localVar, paramVar)는,
-        * 절때 중간에 값이 변경되면 안된다.
-        ==> 지역변수 캡쳐 시 바뀌지 않은, 캡쳐 당시의 지역 변수를 복사하기 때문에
-        이후 지역변수 변경에 대해선 참조할 수 있는 대상이 존재하지 않기 때문이다.
-
-        *
-        * 즉, final 선언 또는 사실상 final(effectively final) 로서 처리 된다.
-        * 이것은 자바 문법이며 규칙이다.
-        * */
         class LocalPrinter implements Printer{
             int value = 0;
 
@@ -35,19 +18,27 @@ public class LocalOuterV3_4 {
                 // 인스턴스는 지역 변수보다 더 오래 살아 남는다.
                 System.out.println("localVar = " + localVar); // 지역 변수
                 System.out.println("paramVar = " + paramVar); // 지역 변수
-                System.out.println("outInstanceVar = " + LocalOuterV3_4.this.outInstanceVar); // LocalOuterV3_4 인스턴스 범위의 변수
+                System.out.println("outInstanceVar = " + LocalOuterV4_5.this.outInstanceVar); // LocalOuterV3_4 인스턴스 범위의 변수
             }
         }
 
-        // 지역 변수면서 인스턴스 (innerLocalPrinter)
         LocalPrinter innerLocalPrinter = new LocalPrinter();
-        // innerLocalPrinter.print(); // 를 여기서 실행하지 않음, Printer 인스턴스만 반환 (2)
+        // 지역 클래스를 생성 후 localVar 의 값을 변경 시...? 캡처를 다시 하는건가?
+        /* 컴파일 오류 발생 => 스택 영역에 존재하는(지역변수 생성 시) 변수의 값과
+        인스턴스 생성 시, 힙 영역에 존재하는 캡처 변수의 값이 서로 달라지는 문제가 발생
+
+        ==> 동기화 문제가 발생된다.
+        Variable 'localVar' is accessed from within inner class, needs to be final or effectively final
+        localVar = 10;
+        Variable 'paramVar' is accessed from within inner class, needs to be final or effectively final
+        paramVar = 20;
+        */
 
         return innerLocalPrinter;
     }
 
     public static void main(String[] args) {
-        LocalOuterV3_4 outerV1 = new LocalOuterV3_4();
+        LocalOuterV4_5 outerV1 = new LocalOuterV4_5();
         Printer withPrinter = outerV1.process(5);
 
         // withPrinter 를 나중에 실행(이전엔 내부 중첩 클래스 안에서 바로 메서드를 호출했음 - 2번 부분)
