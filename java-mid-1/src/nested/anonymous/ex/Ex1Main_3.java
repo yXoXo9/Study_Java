@@ -3,29 +3,6 @@ package nested.anonymous.ex;
 import java.util.Random;
 
 public class Ex1Main_3 {
-    public static void helloDice() {
-        System.out.println("프로그램 시작");
-
-        // 코드 조각 시작
-        int i = new Random().nextInt(6) + 1;
-        System.out.println("주사위 값 = " + i);
-        // 코드 조각 종료
-
-        System.out.println("프로그램 종료");
-    }
-
-    public static void helloSum() {
-        System.out.println("프로그램 시작");
-
-        // 코드 조각 시작
-        for (int i = 0; i < 3; i++) {
-            System.out.println("i = " + i);
-        }
-        // 코드 조각 종료
-
-        System.out.println("프로그램 종료");
-    }
-
     private static class innerMerge {
 
         /**
@@ -58,7 +35,7 @@ public class Ex1Main_3 {
 
     public static void helloMerge(String strFlag){
         System.out.println("프로그램 시작");
-        new innerMerge(strFlag);
+        new innerMerge(strFlag); // 근본적으로 해결되지 않음 => 문자열 값은 무엇이든 들어올 수 있다.
         System.out.println("프로그램 종료");
     }
 
