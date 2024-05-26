@@ -8,8 +8,8 @@ public class Library {
         arrBooks = new Book[size];
     }
 
-    // Library 클래스 변수를 사용하는 경우 정적을 제외하지만
-    // 여기선 Book 클래스가 단독으로 쓰이므로 정적으로 선언해줌...
+    // Library 클래스 변수를 사용하는 경우 (Library 인스턴스와 데이터 공유를 하거나 의존관계인 경우) 정적을 제외하지만
+    // 여기선 Book 클래스가 단독으로 쓰이므로 (바깥 클래스, Library 클래스에 의존하지 않으므로) 정적으로 선언...
     private static class Book {
         private String title; // 제목
         private String author; // 저자명
