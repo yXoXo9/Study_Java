@@ -7,7 +7,7 @@ public class ExceptionService {
     /*
     * 예외를 잡아서 처리 하는 코드
     * */
-//    public void callCatch() throws MyCheckedException{
+    // public void callCatch() throws MyCheckedException{
     public void callCatch() {
 
         try {
