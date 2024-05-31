@@ -4,8 +4,7 @@ public class ExceptionService {
 
     ExceptionClient_2 exceptionClient_2 = new ExceptionClient_2();
 
-    /*
-    * 예외를 잡아서 처리 하는 코드
+    /* 예외를 잡아서 처리 하는 코드
     * */
     // public void callCatch() throws MyCheckedException{
     public void callCatch() {
