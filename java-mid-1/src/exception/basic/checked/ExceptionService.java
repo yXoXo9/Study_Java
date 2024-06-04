@@ -1,7 +1,6 @@
 package exception.basic.checked;
 
 public class ExceptionService {
-
     ExceptionClient_2 exceptionClient_2 = new ExceptionClient_2();
 
     // public void callCatch() throws MyCheckedException{
