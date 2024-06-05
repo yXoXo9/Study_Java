@@ -12,19 +12,18 @@ public class NetworkClientV0_1 {
     // 연결 메서드
     public String connect(){
         // 연결 시 메시지 출력
-        System.out.println("서버 연결 성공 = " + address);
-
+        System.out.println("서버 연결 성공 : " + address);
         return resultMsg;
     }
 
     public String send(String data){
         // 전송 시 메시지 출력
-        System.out.println("서버에 데이터 전송 = " + address + " // 데이터 : " + data);
+        System.out.println("서버에 데이터 전송 : " + address + " // 데이터 : " + data);
         
         return resultMsg;
     }
 
     public void disconnect(){
-        System.out.println("연결 해제 = " + address);
+        System.out.println("연결 해제 : " + address);
     }
 }
