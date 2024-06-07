@@ -2,9 +2,7 @@ package exception.basic.checked;
 
 public class ExceptionService {
     ExceptionClient_2 exceptionClient_2 = new ExceptionClient_2();
-
-    // public void callCatch() throws MyCheckedException{
-    /*
+    /* public void callCatch() throws MyCheckedException{
      * 예외가 발생 시 할 수 있는 대처 방법 2가지
      * 1) 예외를 잡아서 처리 하는 코드
      * */
