@@ -10,7 +10,7 @@ public class NetworkMainV0_3 {
         while (true){
             System.out.print("메시지 입력 : ");
             String inputString = scanner.nextLine();
-            if(inputString.equals("x")){
+            if(inputString.equals("exit")){
                 break;
             }
             networkServiceV02.sendMessage(inputString);
