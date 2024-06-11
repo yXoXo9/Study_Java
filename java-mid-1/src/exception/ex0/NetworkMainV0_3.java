@@ -8,7 +8,7 @@ public class NetworkMainV0_3 {
 
         Scanner scanner = new Scanner(System.in);
         while (true){
-            System.out.print("메시지 입력 : ");
+            System.out.print("메시지입력 : ");
             String inputString = scanner.nextLine();
             if(inputString.equals("exit")){
                 break;
