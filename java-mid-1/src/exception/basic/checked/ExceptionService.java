@@ -14,7 +14,7 @@ public class ExceptionService {
             // 예외 처리 로직 - 불을 끄는 로직 - 에러를 처리하는 로직 수행
             System.out.println("ExceptionClient_2에서 catch 문을 통한 exception 예외 처리, exception.getMessage() = " + e.getMessage()); // getMessage 는 Exception 을 상속받은 메서드 Exception
         }
-        System.out.println("정상 흐름");
+        System.out.println("callCatch_정상 종료");
     }
 
     /* * 2) 예외를 처리하지 않고 밖으로 던지는 코드 (throws 선언이 필수)
