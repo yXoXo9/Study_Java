@@ -9,7 +9,6 @@ public class StringGradeEx1_1 {
         * 하지만 문자열 상수를 사용해도, 지금 문제를 근본적으로 해결할 수 없다.
         * => String 은 어떤 문자열이든 입력 가능
         * 즉, 메서드에 String 타입의 문자를 직접 입력 extracted1() 해도 상관 없다.
-        *
         * 메서드 사용을 의도한 방향으로 계획하기 위해서는 올바른 메서드 설계가 중요하다.
         * ==> 타입 안전 열거형 패턴 - Type-Safe Enum Pattern
         * */
