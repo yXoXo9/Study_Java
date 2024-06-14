@@ -20,11 +20,12 @@ public class StringGradeEx1_1 {
         int pr = 10_000;
 
         DiscountService discountService = new DiscountService();
+
         // 존재하지 않는 (잘못된) 등급 수행
         int vip = discountService.discount("VIP", pr);
         System.out.println("VIP 등급의 할인 금액 : " + vip);
 
-        // 오타
+        // 오타의 경우
         int xmlT = discountService.discount("xmlT", pr);
         System.out.println("xmlT 등급의 할인 금액 : " + xmlT);
 
