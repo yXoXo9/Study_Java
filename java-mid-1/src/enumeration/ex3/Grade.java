@@ -2,12 +2,10 @@ package enumeration.ex3;
 
 public enum Grade {
     /*
-    * 열거형 정의 시 class 대신 enum 을 사용한다.
-    * BASIC, GOLD, DIAMOND
-    * */
-    BASIC
-    , GOLD
-    , DIAMOND
+     * 열거형 정의 시 class 대신 enum 을 사용한다.
+     * BASIC, GOLD, DIAMOND
+     * */
+    BASIC, GOLD, DIAMOND
 
     /*
     하기 코드와 동일한 기능을 수행 (enum 또한 클래스다)
