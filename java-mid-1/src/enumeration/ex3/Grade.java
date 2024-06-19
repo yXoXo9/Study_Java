@@ -7,8 +7,7 @@ public enum Grade {
      * */
     BASIC, GOLD, DIAMOND
 
-    /*
-    하기 코드와 동일한 기능을 수행 (enum 또한 클래스다)
+    /*하기 코드와 동일한 기능을 수행 (enum 또한 클래스다)
     열거형은 자동으로 java.lang.Enum 을 상속받는다.
     외부에서 임의로 생성할 수 없다.
 
