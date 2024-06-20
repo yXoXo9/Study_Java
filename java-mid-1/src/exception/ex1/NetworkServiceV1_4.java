@@ -19,7 +19,6 @@ public class NetworkServiceV1_4 {
             }
         }
         client.disconnect();
-
     }
 
     private static boolean isError(String connectResult) {

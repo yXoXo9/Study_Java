@@ -16,13 +16,11 @@ public class NetworkServiceV1_3 {
             System.out.println("네트워크 오류 발생 코드 : " + connectResult);
             return;
         }
-
         String sendResult = client.send(data);
         if (isError(sendResult)){
             System.out.println("네트워크 전송 발생 코드 : " + sendResult);
             return;
         }
-
         client.disconnect();
 
     }
