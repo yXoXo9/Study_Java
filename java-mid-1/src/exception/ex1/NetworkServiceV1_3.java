@@ -9,7 +9,6 @@ public class NetworkServiceV1_3 {
 
         // 메시지 연결하기 위해서는 서버 연결 먼저.
         String connectResult = client.connect();
-
         // 결과가 성공이 아니다 => 오류다.
         // => 조건을 사람이 이해하기 더 쉽게 리팩토링
         if(isError(connectResult)){
@@ -21,8 +20,8 @@ public class NetworkServiceV1_3 {
             System.out.println("네트워크 전송 발생 코드 : " + sendResult);
             return;
         }
-        client.disconnect();
 
+        client.disconnect();
     }
 
     private static boolean isError(String connectResult) {
