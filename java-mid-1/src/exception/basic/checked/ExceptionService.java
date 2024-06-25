@@ -16,7 +16,6 @@ public class ExceptionService {
         }
         System.out.println("callCatch_정상 종료");
     }
-
     /* * 2) 예외를 처리하지 않고 밖으로 던지는 코드 (throws 선언이 필수)
     * */
     public void catchThrows() throws MyCheckedException { // => MyCheckedException 이 발생하게 되면 밖으로 던진다는 의미
