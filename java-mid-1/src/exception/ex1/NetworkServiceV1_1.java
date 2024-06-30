@@ -4,7 +4,6 @@ public class NetworkServiceV1_1 {
     public void sendMessage(String data){
         String accessAddress = "http://example.com";
         NetworkClientV1_0 client = new NetworkClientV1_0(accessAddress);
-
         // 에러 컨트롤
         client.initError(data);
 
@@ -16,6 +15,5 @@ public class NetworkServiceV1_1 {
 
         // 네트워크 연결 해제
         client.disconnect();
-
     }
 }
