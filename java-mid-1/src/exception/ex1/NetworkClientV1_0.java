@@ -42,10 +42,10 @@ public class NetworkClientV1_0 {
 
     public void initError(String data){
         if(data.contains("er1")){
-            connectError = true; // 연결 에러 발생
+            connectError = true; //연결 에러 발생
         }
         if(data.contains("er2")){
-            sendError = true; // 전송 에러 발생
+            sendError = true; //전송 에러 발생
         }
     }
 }
