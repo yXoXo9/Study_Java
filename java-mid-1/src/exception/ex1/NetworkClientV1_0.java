@@ -1,7 +1,6 @@
 package exception.ex1;
 
 public class NetworkClientV1_0 {
-
     /* 테스트용 */
     public boolean connectError;
     public boolean sendError;
@@ -19,6 +18,7 @@ public class NetworkClientV1_0 {
             System.out.println("연결 실패 = " + address);
             return "connectError";
         }
+
         // 연결 시 메시지 출력
         System.out.println("서버 연결 성공 = " + address);
 
@@ -30,6 +30,7 @@ public class NetworkClientV1_0 {
             System.out.println("데이터 전송 실패 = " + address);
             return "sendError";
         }
+
         // 전송 시 메시지 출력
         System.out.println("서버에 데이터 전송 = " + address + " // 데이터 : " + data);
         
