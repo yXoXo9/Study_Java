@@ -11,7 +11,7 @@ public class ExceptionService {
         try {
             // 던져진 Exception 이 포함된 메서드를 실행(try) 하여
             exceptionClient_2.call(); // 에러 발생 시 => new throw MyCheckedException("excep"); 와 동일한 모습으로 예외가 실행된다고 생각...
-        } catch (MyCheckedException e){
+        } catch (MyCheckedException e) {
 
             // Exception 이 실행될 경우 (catch)처리
             // 예외 처리 로직 - 불을 끄는 로직 - 에러를 처리하는 로직 수행
