@@ -7,7 +7,6 @@ package exception.basic.checked;
 public class MyCheckedException extends Exception {
 
     // 오류 메시지를 받은 후 부모에 넘겨 줌
-
     public MyCheckedException(String message) {
         super(message);
     }
