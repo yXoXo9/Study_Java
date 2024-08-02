@@ -8,7 +8,6 @@ public class NetworkServiceV1_4 {
 
         client.initError(data);
         String connectResult = client.connect();
-
         if(isError(connectResult)){
             System.out.println("네트워크 오류 발생 코드 : " + connectResult);
             return;
@@ -19,7 +18,6 @@ public class NetworkServiceV1_4 {
                 return;
             }
         }
-
         client.disconnect();
     }
 
